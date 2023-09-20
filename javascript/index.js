@@ -18,6 +18,16 @@ function updateTime() {
     romeDate.innerHTML = romeActualTime.format("MMMM Do YYYY");
     romeTime.innerHTML = romeActualTime.format(`h:mm:ss [<small>]A[</small>]`);
   }
+  let seoulElement = document.querySelector("#seoul");
+  if (seoulElement) {
+    let seoulDate = seoulElement.querySelector(".date");
+    let seoulTime = seoulElement.querySelector(".time");
+    let seoulActualTime = moment().tz("Asia/Seoul");
+    seoulDate.innerHTML = seoulActualTime.format("MMMM Do YYYY");
+    seoulTime.innerHTML = seoulActualTime.format(
+      `h:mm:ss [<small>]A[</small>]`
+    );
+  }
 }
 
 function updateCity(event) {
