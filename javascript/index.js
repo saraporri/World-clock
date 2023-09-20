@@ -47,6 +47,8 @@ function updateCity(event) {
             `h:mm:ss [<small>]A[</small>]`
           )}</div>
         </div>`;
+  let goBack = document.querySelector("#goBack");
+  goBack.innerHTML = `<a href="/">Return</a>`;
 }
 updateTime();
 setInterval(updateTime, 1000);
